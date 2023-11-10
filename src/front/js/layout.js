@@ -5,12 +5,13 @@ import { BackendURL } from "./component/backendURL";
 
 import  {LoginPage}  from "./pages/login";
 import  {SignupPage}  from "./pages/signup";
-import { Demo } from "./pages/demo";
+import { Home } from "./pages/home";
 
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { Private } from "./pages/private";
 
 
 //create your first component
@@ -28,8 +29,9 @@ const Layout = () => {
                     <Navbar />
                     <Routes>
                         <Route element={<LoginPage />} path="/" />
-                        <Route element={<Demo />} path="/demo" />
+                        <Route element={<Home />} path="/home" />
                         <Route element={<SignupPage />} path="/signup" />
+                        <Route element={<Private />} path="/private" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />
